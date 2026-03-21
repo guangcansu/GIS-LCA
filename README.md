@@ -7,12 +7,30 @@
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-research%20prototype-orange.svg)](paper/whitepaper.md)
+[![Series](https://img.shields.io/badge/series-open%20LCA%20systems-0f766e.svg)](https://github.com/guangcansu)
 
 > **Because “where” can matter as much as “what” in life cycle assessment.**
 
 Electricity, water, transport, and many impact pathways are deeply location-sensitive. But in practice, regional metadata are often fuzzy, inconsistent, or silently collapsed into generic averages.
 
-**GIS-LCA** makes those geography decisions explicit. It normalizes place names, applies regional factor lookups, reveals fallback behavior, and turns location handling into something transparent and auditable.
+**GIS-LCA** is the spatial layer in the **Open LCA Systems Series**. It normalizes place names, applies regional factor lookups, reveals fallback behavior, and turns location handling into something transparent and auditable.
+
+---
+
+## 🧬 Open LCA Systems Series
+
+This repository is one part of a four-project research stack:
+
+| Repository | Role in the stack |
+|------------|-------------------|
+| [LCA-Harmonizer](https://github.com/guangcansu/LCA-Harmonizer) | Normalize and audit extracted evidence |
+| [LCA-Uncertainty](https://github.com/guangcansu/LCA-Uncertainty) | Quantify confidence, variability, and dominant uncertainty drivers |
+| [GIS-LCA](https://github.com/guangcansu/GIS-LCA) | Add geography-aware factor selection and fallback logic |
+| [LCA-Benchmark](https://github.com/guangcansu/LCA-Benchmark) | Evaluate AI-assisted LCA extraction and recommendation workflows |
+
+Series view:
+
+`extract -> harmonize -> quantify confidence -> regionalize -> evaluate AI support`
 
 ---
 
@@ -44,6 +62,12 @@ gis-lca adapt \
   --metadata examples/manufacturing_metadata.json \
   --inventory examples/manufacturing_inventory.csv \
   --output examples/manufacturing_adapted.json
+```
+
+Release helper:
+
+```bash
+sh scripts/publish_github.sh
 ```
 
 ---
@@ -87,12 +111,20 @@ The project is motivated by regionalized LCA literature and data-system challeng
 
 ---
 
+## 🔗 Interfaces in the Series
+
+- Upstream: `LCA-Harmonizer` can provide cleaner metadata and process descriptors
+- Parallel: `LCA-Uncertainty` can quantify the variability of regionalized factors
+- Sidecar: `LCA-Benchmark` can evaluate AI systems that recommend region-specific datasets or factors
+
+---
+
 ## 🌍 Included Demo Factors
 
 - electricity climate factors
 - water scarcity factors
 
-The included factors are synthetic demo values so the adapter can run out of the box. They are meant as placeholders for future integration with real regional datasets and software bridges.
+The included factors are synthetic demo values so the adapter can run out of the box. They are placeholders for future integration with real regional datasets and software bridges.
 
 ---
 
@@ -106,14 +138,6 @@ The included factors are synthetic demo values so the adapter can run out of the
 - [ ] Transport regionalization
 - [ ] Brightway/openLCA adapter layer
 - [ ] Spatial metadata quality scoring
-
----
-
-## 🔗 Best With
-
-- `dynlca` for time-varying regional electricity workflows
-- `LCA-Harmonizer` for upstream evidence cleanup
-- future GIS-aware or policy-facing LCA studies
 
 ---
 
