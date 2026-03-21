@@ -1,0 +1,12 @@
+{
+  "factor_name": "grid_climate_factor",
+  "unit": "kg CO2-eq/kWh",
+  "factors": {
+    "GLO": { "value": 0.62, "source": "synthetic demo factor" },
+    "CN": { "value": 0.70, "source": "synthetic demo factor" },
+    "CN-EAST": { "value": 0.78, "source": "synthetic demo factor" },
+    "EU": { "value": 0.29, "source": "synthetic demo factor" },
+    "US": { "value": 0.38, "source": "synthetic demo factor" },
+    "US-IL": { "value": 0.41, "source": "synthetic demo factor" }
+  }
+}

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "Regionalized-LCA-Adapter"
+message: "Please cite the software and whitepaper if this repository supports your research."
+type: software
+authors:
+  - family-names: "Su"
+    given-names: "Guangcan"
+repository-code: "https://github.com/guangcansu/Regionalized-LCA-Adapter"
+license: "MIT"
+version: "0.1.0"
+date-released: "2026-03-21"
+abstract: >
+  A lightweight geography normalization and regional factor adapter for
+  regionalized LCA workflows.

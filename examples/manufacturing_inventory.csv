@@ -1,0 +1,4 @@
+process,activity_type,amount,unit,geography,notes
+forming,electricity_use,1200,kWh,,grid electricity demand
+cooling,water_use,18,m3,,process water consumption
+packaging,electricity_use,80,kWh,EU,outsourced packaging electricity

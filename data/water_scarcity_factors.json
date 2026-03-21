@@ -1,0 +1,12 @@
+{
+  "factor_name": "water_scarcity_factor",
+  "unit": "m3 world-eq/m3",
+  "factors": {
+    "GLO": { "value": 1.00, "source": "synthetic demo factor" },
+    "CN": { "value": 1.70, "source": "synthetic demo factor" },
+    "CN-EAST": { "value": 2.10, "source": "synthetic demo factor" },
+    "EU": { "value": 0.60, "source": "synthetic demo factor" },
+    "US": { "value": 1.20, "source": "synthetic demo factor" },
+    "US-IL": { "value": 0.90, "source": "synthetic demo factor" }
+  }
+}
