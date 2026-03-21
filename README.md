@@ -1,61 +1,34 @@
-# Regionalized-LCA-Adapter
+<p align="center">
+  <img src="assets/logo.svg" alt="Regionalized-LCA-Adapter logo" width="124">
+</p>
 
-`Regionalized-LCA-Adapter` is a lightweight adapter layer for adding geography-aware logic to LCA inventories.
+# 🌐 Regionalized-LCA-Adapter — Put LCA Back on the Map
 
-It focuses on a practical gap in many workflows:
+[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-research%20prototype-orange.svg)](paper/whitepaper.md)
 
-- the inventory says where the system is,
-- but the model still uses generic or mismatched regional factors,
-- and the fallback logic is rarely explicit.
+> **Because “where” can matter as much as “what” in life cycle assessment.**
 
-This repository makes those decisions visible and machine-readable.
+Electricity, water, transport, and many impact pathways are deeply location-sensitive. But in practice, regional metadata are often fuzzy, inconsistent, or silently collapsed into generic averages.
 
-## Paper
+**Regionalized-LCA-Adapter** makes those geography decisions explicit. It normalizes place names, applies regional factor lookups, reveals fallback behavior, and turns location handling into something transparent and auditable.
 
-- Whitepaper: [paper/whitepaper.md](paper/whitepaper.md)
-- Bibliography: [paper/references.bib](paper/references.bib)
-- Citation metadata: [CITATION.cff](CITATION.cff)
+---
 
-## Features
+## ✨ Key Features
 
-- normalize geography labels into canonical region codes
-- resolve fallback chains when exact regional factors are unavailable
-- apply example regional electricity and water-scarcity factors
-- report whether each factor was exact or inherited from a broader region
-- export a machine-readable adapted inventory
+| Feature | What it does |
+|---------|--------------|
+| Geography normalization | Converts labels like `China East`, `EU`, or `Illinois` into canonical region codes |
+| Fallback logic | Falls back from subregion to country to global when exact factors are unavailable |
+| Regional factor lookup | Applies example electricity and water-scarcity factors |
+| Match provenance | Tells you whether a factor was exact or inherited |
+| Machine-readable output | Saves an adapted inventory with region and factor metadata |
 
-## Repository layout
+---
 
-```text
-Regionalized-LCA-Adapter/
-├── CITATION.cff
-├── data/
-│   ├── electricity_factors.json
-│   └── water_scarcity_factors.json
-├── docs/
-│   └── research_brief.md
-├── examples/
-│   ├── manufacturing_inventory.csv
-│   └── manufacturing_metadata.json
-├── paper/
-│   ├── references.bib
-│   └── whitepaper.md
-├── src/regionalized_lca_adapter/
-│   ├── __init__.py
-│   ├── __main__.py
-│   ├── adapter.py
-│   ├── cli.py
-│   ├── factors.py
-│   ├── geography.py
-│   └── pipeline.py
-├── tests/
-│   └── test_adapter.py
-├── LICENSE
-├── pyproject.toml
-└── README.md
-```
-
-## Quick start
+## 🚀 Quick Start
 
 ```bash
 cd /Users/alex/Documents/Codex/Regionalized-LCA-Adapter
@@ -73,24 +46,86 @@ regionalized-lca adapt \
   --output examples/manufacturing_adapted.json
 ```
 
-## Why this repo matters
+---
 
-Regionalization is essential for electricity, water, transport, exposure-dependent impacts, and many policy-facing applications. Yet in practice, regionalized LCA still struggles with:
+## 🗺️ Why It Matters
 
-- inconsistent place names
-- incompatible metadata formats
-- missing exact regional factors
-- hidden fallback assumptions
+Regionalized LCA often fails quietly, not loudly. The model runs, but:
 
-This repository aims to make those steps explicit and auditable.
+- the geography label was ambiguous
+- the exact regional factor was missing
+- the workflow silently used a national average
+- nobody recorded the fallback
 
-## Verification
+This repository surfaces that hidden logic and makes it part of the output.
+
+---
+
+## 📦 Example Output
+
+The adapter records:
+
+- resolved geography code
+- factor name and factor unit
+- factor region actually used
+- exact vs fallback match type
+- adapted result value
+
+Example file:
+
+- [examples/manufacturing_adapted.json](examples/manufacturing_adapted.json)
+
+---
+
+## 📄 Paper
+
+- Whitepaper: [paper/whitepaper.md](paper/whitepaper.md)
+- Bibliography: [paper/references.bib](paper/references.bib)
+- Citation metadata: [CITATION.cff](CITATION.cff)
+
+The project is motivated by regionalized LCA literature and data-system challenges, including work by Mutel et al. (2019), UNEP GLAD, and Xu et al. (2025).
+
+---
+
+## 🌍 Included Demo Factors
+
+- electricity climate factors
+- water scarcity factors
+
+The included factors are synthetic demo values so the adapter can run out of the box. They are meant as placeholders for future integration with real regional datasets and software bridges.
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Geography alias normalization
+- [x] Fallback-chain logic
+- [x] Regional electricity demo factors
+- [x] Regional water-scarcity demo factors
+- [ ] Province/state-level coverage expansion
+- [ ] Transport regionalization
+- [ ] Brightway/openLCA adapter layer
+- [ ] Spatial metadata quality scoring
+
+---
+
+## 🔗 Best With
+
+- `dynlca` for time-varying regional electricity workflows
+- `LCA-Harmonizer` for upstream evidence cleanup
+- future GIS-aware or policy-facing LCA studies
+
+---
+
+## ✅ Verification
 
 ```bash
 cd /Users/alex/Documents/Codex/Regionalized-LCA-Adapter
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-## License
+---
+
+## 📄 License
 
 MIT
