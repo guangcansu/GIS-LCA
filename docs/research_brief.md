@@ -11,7 +11,7 @@ Regionalized LCA is valuable, but still difficult in day-to-day workflows becaus
 
 ## Why this repository
 
-`Regionalized-LCA-Adapter` is designed as a practical adapter layer that normalizes geographies, applies factor lookups, and records whether each match is exact or inherited.
+`GIS-LCA` is designed as a practical adapter layer that normalizes geographies, applies factor lookups, and records whether each match is exact or inherited.
 
 ## MVP scope
 

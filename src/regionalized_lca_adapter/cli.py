@@ -7,7 +7,7 @@ from .pipeline import adapt_inventory, render_summary, save_json
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="regionalized-lca",
+        prog="gis-lca",
         description="Normalize geographies and apply regional factor lookups for LCA inventories.",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)

@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="Regionalized-LCA-Adapter logo" width="124">
+  <img src="assets/logo.svg" alt="GIS-LCA logo" width="124">
 </p>
 
-# 🌐 Regionalized-LCA-Adapter — Put LCA Back on the Map
+# 🌐 GIS-LCA — Put LCA Back on the Map
 
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -12,7 +12,7 @@
 
 Electricity, water, transport, and many impact pathways are deeply location-sensitive. But in practice, regional metadata are often fuzzy, inconsistent, or silently collapsed into generic averages.
 
-**Regionalized-LCA-Adapter** makes those geography decisions explicit. It normalizes place names, applies regional factor lookups, reveals fallback behavior, and turns location handling into something transparent and auditable.
+**GIS-LCA** makes those geography decisions explicit. It normalizes place names, applies regional factor lookups, reveals fallback behavior, and turns location handling into something transparent and auditable.
 
 ---
 
@@ -31,7 +31,7 @@ Electricity, water, transport, and many impact pathways are deeply location-sens
 ## 🚀 Quick Start
 
 ```bash
-cd /Users/alex/Documents/Codex/Regionalized-LCA-Adapter
+cd /Users/alex/Documents/Codex/GIS-LCA
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
@@ -40,7 +40,7 @@ pip install -e .
 Run the example:
 
 ```bash
-regionalized-lca adapt \
+gis-lca adapt \
   --metadata examples/manufacturing_metadata.json \
   --inventory examples/manufacturing_inventory.csv \
   --output examples/manufacturing_adapted.json
@@ -120,7 +120,7 @@ The included factors are synthetic demo values so the adapter can run out of the
 ## ✅ Verification
 
 ```bash
-cd /Users/alex/Documents/Codex/Regionalized-LCA-Adapter
+cd /Users/alex/Documents/Codex/GIS-LCA
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 

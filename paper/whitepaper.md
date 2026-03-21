@@ -1,12 +1,12 @@
-# Regionalized-LCA-Adapter Whitepaper
+# GIS-LCA Whitepaper
 
 ## Title
 
-**Regionalized-LCA-Adapter: A Lightweight Geography and Fallback Layer for Regionalized Life Cycle Assessment**
+**GIS-LCA: A Lightweight Geography and Fallback Layer for Regionalized Life Cycle Assessment**
 
 ## Abstract
 
-The environmental impacts of electricity, water consumption, transport, and emissions often depend strongly on location. However, practical regionalized LCA remains difficult because inventories and factors use inconsistent geographies, missing metadata, and hidden fallback assumptions. `Regionalized-LCA-Adapter` is an open-source toolkit that normalizes geography labels, applies regional factor lookups, records fallback provenance, and exports machine-readable outputs. The project is intended as a bridge between generic inventories and more spatially explicit LCA workflows.
+The environmental impacts of electricity, water consumption, transport, and emissions often depend strongly on location. However, practical regionalized LCA remains difficult because inventories and factors use inconsistent geographies, missing metadata, and hidden fallback assumptions. `GIS-LCA` is an open-source toolkit that normalizes geography labels, applies regional factor lookups, records fallback provenance, and exports machine-readable outputs. The project is intended as a bridge between generic inventories and more spatially explicit LCA workflows.
 
 ## Motivation
 
@@ -21,7 +21,7 @@ This repository addresses that operational gap.
 
 ## Project introduction
 
-`Regionalized-LCA-Adapter` currently includes:
+`GIS-LCA` currently includes:
 
 - geography normalization rules
 - fallback-chain logic

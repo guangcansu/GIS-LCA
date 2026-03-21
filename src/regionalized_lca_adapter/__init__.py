@@ -1,4 +1,4 @@
-"""Public interface for Regionalized-LCA-Adapter."""
+"""Public interface for GIS-LCA."""
 
 from .pipeline import adapt_inventory
 
