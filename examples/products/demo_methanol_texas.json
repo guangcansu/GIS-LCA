@@ -1,0 +1,10 @@
+{
+  "_description": "Demo input spec for GIS-LCA product runner: 1 t methanol SMR, Texas.",
+  "_usage": "gis-lca product methanol --geography Texas --output examples/products/out_methanol_tx.json",
+  "product": "methanol",
+  "geography": "Texas",
+  "functional_unit": "1 tonne methanol",
+  "expected_region_code": "US-TX",
+  "expected_electricity_factor": 0.41,
+  "expected_water_factor": 2.80
+}

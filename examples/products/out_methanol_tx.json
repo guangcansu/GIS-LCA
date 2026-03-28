@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "study_id": "methanol_gis_lca",
+    "product": "methanol",
+    "description": "1 tonne methanol (CH3OH) via SMR route, cradle-to-gate",
+    "functional_unit": "1 tonne methanol",
+    "geography": "Texas",
+    "supplier_site": "",
+    "notes": "Route: natural gas SMR only. CN coal-based route excluded (Phase 2). GHG scope: direct emissions + electricity. Upstream NG extraction excluded Phase 1.",
+    "references": [
+      "Ecoinvent 3.9: methanol production, from natural gas, RER.",
+      "IEA (2019) The Future of Hydrogen. Technology annex: methanol.",
+      "GREET 2023: methanol pathway from NG."
+    ]
+  },
+  "summary": {
+    "total_rows": 5,
+    "exact_matches": 2,
+    "fallback_matches": 0,
+    "direct_emission_rows": 2,
+    "transport_stub_rows": 1,
+    "not_applicable_rows": 0,
+    "totals_by_unit": {
+      "kg CO2-eq": 777.38,
+      "m3 world-eq": 2.1
+    }
+  },
+  "rows": [
+    {
+      "process": "smr_and_synthesis_electricity",
+      "activity_type": "electricity_use",
+      "amount": 218.0,
+      "unit": "kWh",
+      "geography": "",
+      "notes": "Electricity for compressors, pumps, control systems; Ecoinvent 3.9",
+      "supplier_site": "",
+      "resolved_geography": "US-TX",
+      "factor_name": "grid_climate_factor",
+      "factor_unit": "kg CO2-eq/kWh",
+      "factor_value": 0.41,
+      "factor_region_used": "US-TX",
+      "match_type": "exact",
+      "adapted_value": 89.38,
+      "adapted_unit": "kg CO2-eq",
+      "factor_source": "US EPA eGRID 2022 ERCOT"
+    },
+    {
+      "process": "process_water_boiler_feed",
+      "activity_type": "water_use",
+      "amount": 0.75,
+      "unit": "m3",
+      "geography": "",
+      "notes": "Boiler feed water for steam generation; IEA Methanol Technology 2019",
+      "supplier_site": "",
+      "resolved_geography": "US-TX",
+      "factor_name": "water_scarcity_factor",
+      "factor_unit": "m3 world-eq/m3",
+      "factor_value": 2.8,
+      "factor_region_used": "US-TX",
+      "match_type": "exact",
+      "adapted_value": 2.1,
+      "adapted_unit": "m3 world-eq",
+      "factor_source": "AWARE Texas (semi-arid regions)"
+    },
+    {
+      "process": "natural_gas_feedstock_combustion_co2",
+      "activity_type": "direct_emission",
+      "amount": 423.0,
+      "unit": "kg CO2-eq",
+      "geography": "",
+      "notes": "Direct CO2 from NG feedstock carbon in SMR reactor; GREET 2023 / Ecoinvent 3.9",
+      "supplier_site": "",
+      "resolved_geography": "US-TX",
+      "factor_name": "direct_emission",
+      "factor_unit": "kg CO2-eq",
+      "factor_value": 1.0,
+      "factor_region_used": "N/A",
+      "match_type": "direct",
+      "adapted_value": 423.0,
+      "adapted_unit": "kg CO2-eq",
+      "factor_source": "Direct CO2 from NG feedstock carbon in SMR reactor; GREET 2023 / Ecoinvent 3.9"
+    },
+    {
+      "process": "natural_gas_fuel_combustion_co2",
+      "activity_type": "direct_emission",
+      "amount": 265.0,
+      "unit": "kg CO2-eq",
+      "geography": "",
+      "notes": "Direct CO2 from NG fuel burned for process heat; Ecoinvent 3.9",
+      "supplier_site": "",
+      "resolved_geography": "US-TX",
+      "factor_name": "direct_emission",
+      "factor_unit": "kg CO2-eq",
+      "factor_value": 1.0,
+      "factor_region_used": "N/A",
+      "match_type": "direct",
+      "adapted_value": 265.0,
+      "adapted_unit": "kg CO2-eq",
+      "factor_source": "Direct CO2 from NG fuel burned for process heat; Ecoinvent 3.9"
+    },
+    {
+      "process": "ng_feedstock_pipeline_transport",
+      "activity_type": "transport",
+      "amount": 0.03,
+      "unit": "tonne-km",
+      "geography": "",
+      "notes": "Pipeline transport of NG feedstock ~300 km; stub Phase 2",
+      "supplier_site": "",
+      "resolved_geography": "US-TX",
+      "factor_name": "transport_climate_factor",
+      "factor_unit": "kg CO2-eq/tonne-km",
+      "factor_value": null,
+      "factor_region_used": null,
+      "match_type": "not_adapted_phase2_stub",
+      "adapted_value": null,
+      "adapted_unit": null,
+      "factor_source": "transport_factor is a Phase-2 stub. Row recorded with geography only; no adapted_value computed yet."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "_description": "Demo input spec for GIS-LCA product runner: 1 L bottled water, China East.",
+  "_usage": "gis-lca product bottled_water --geography 'China East' --output examples/products/out_bottled_water_cn_east.json",
+  "product": "bottled_water",
+  "geography": "China East",
+  "functional_unit": "1 litre",
+  "expected_region_code": "CN-EAST",
+  "expected_electricity_factor": 0.78,
+  "expected_water_factor": 2.10
+}

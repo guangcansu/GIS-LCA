@@ -1,0 +1,10 @@
+{
+  "_description": "Demo input spec for GIS-LCA product runner: 1 t H2SO4 contact process, Germany.",
+  "_usage": "gis-lca product sulfuric_acid --geography Germany --output examples/products/out_h2so4_de.json",
+  "product": "sulfuric_acid",
+  "geography": "Germany",
+  "functional_unit": "1 tonne H2SO4 (98%)",
+  "expected_region_code": "DE",
+  "expected_electricity_factor": 0.38,
+  "expected_water_factor": 0.50
+}

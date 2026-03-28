@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "study_id": "sulfuric_acid_gis_lca",
+    "product": "sulfuric_acid",
+    "description": "1 tonne H2SO4 (98 wt%) via contact process, cradle-to-gate",
+    "functional_unit": "1 tonne H2SO4 (98%)",
+    "geography": "Germany",
+    "supplier_site": "",
+    "notes": "Contact process (double absorption). Steam export credit excluded (Phase 1). Sulfur feedstock upstream excluded (byproduct allocation boundary). SO2 emission tracked for acidification; GWP100 contribution is zero.",
+    "references": [
+      "Ecoinvent 3.9: sulfuric acid production, RER.",
+      "EU BREF on Large Volume Inorganic Chemicals (2017), Section 4.3 BAT.",
+      "IHS Markit (2019) Sulfuric Acid Process Economics Program."
+    ]
+  },
+  "summary": {
+    "total_rows": 4,
+    "exact_matches": 2,
+    "fallback_matches": 0,
+    "direct_emission_rows": 1,
+    "transport_stub_rows": 1,
+    "not_applicable_rows": 0,
+    "totals_by_unit": {
+      "kg CO2-eq": 5.7,
+      "m3 world-eq": 0.11,
+      "kg SO2": 0.28
+    }
+  },
+  "rows": [
+    {
+      "process": "contact_process_electricity",
+      "activity_type": "electricity_use",
+      "amount": 15.0,
+      "unit": "kWh",
+      "geography": "",
+      "notes": "Fans, pumps, instrumentation; Ecoinvent 3.9 / IHS Markit 2019",
+      "supplier_site": "",
+      "resolved_geography": "DE",
+      "factor_name": "grid_climate_factor",
+      "factor_unit": "kg CO2-eq/kWh",
+      "factor_value": 0.38,
+      "factor_region_used": "DE",
+      "match_type": "exact",
+      "adapted_value": 5.7,
+      "adapted_unit": "kg CO2-eq",
+      "factor_source": "UBA Germany 2022"
+    },
+    {
+      "process": "process_water_dilution_cooling",
+      "activity_type": "water_use",
+      "amount": 0.22,
+      "unit": "m3",
+      "geography": "",
+      "notes": "Dilution water and cooling tower makeup; Ecoinvent 3.9",
+      "supplier_site": "",
+      "resolved_geography": "DE",
+      "factor_name": "water_scarcity_factor",
+      "factor_unit": "m3 world-eq/m3",
+      "factor_value": 0.5,
+      "factor_region_used": "DE",
+      "match_type": "exact",
+      "adapted_value": 0.11,
+      "adapted_unit": "m3 world-eq",
+      "factor_source": "AWARE Germany"
+    },
+    {
+      "process": "fugitive_so2_emission",
+      "activity_type": "direct_emission",
+      "amount": 0.28,
+      "unit": "kg SO2",
+      "geography": "",
+      "notes": "Fugitive SO2 stack emission (BAT-compliant contact process); EU BREF Inorganic Chemicals 2017. GWP100=0 but kept for acidification pathway in Phase 2.",
+      "supplier_site": "",
+      "resolved_geography": "DE",
+      "factor_name": "direct_emission",
+      "factor_unit": "kg SO2",
+      "factor_value": 1.0,
+      "factor_region_used": "N/A",
+      "match_type": "direct",
+      "adapted_value": 0.28,
+      "adapted_unit": "kg SO2",
+      "factor_source": "Fugitive SO2 stack emission (BAT-compliant contact process); EU BREF Inorganic Chemicals 2017. GWP100=0 but kept for acidification pathway in Phase 2."
+    },
+    {
+      "process": "sulfur_feedstock_transport",
+      "activity_type": "transport",
+      "amount": 0.163,
+      "unit": "tonne-km",
+      "geography": "",
+      "notes": "Elemental S rail/ship ~500 km; 0.327 t S * 500 km; stub Phase 2",
+      "supplier_site": "",
+      "resolved_geography": "DE",
+      "factor_name": "transport_climate_factor",
+      "factor_unit": "kg CO2-eq/tonne-km",
+      "factor_value": null,
+      "factor_region_used": null,
+      "match_type": "not_adapted_phase2_stub",
+      "adapted_value": null,
+      "adapted_unit": null,
+      "factor_source": "transport_factor is a Phase-2 stub. Row recorded with geography only; no adapted_value computed yet."
+    }
+  ]
+}

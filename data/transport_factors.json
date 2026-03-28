@@ -1,0 +1,32 @@
+{
+  "factor_name": "transport_climate_factor",
+  "unit": "kg CO2-eq/tonne-km",
+  "description": "Transport emission factors by mode. Values represent average CO2-eq per tonne-km. Source: IPCC AR6 WGIII Annex III; EEA 2023 transport; ecoinvent 3.9 reference values.",
+  "modes": {
+    "truck": {
+      "GLO": { "value": 0.0900, "source": "IPCC AR6 WGIII global average road freight" },
+      "CN":  { "value": 0.1050, "source": "Synthetic: CN truck (older fleet, higher load)" },
+      "EU":  { "value": 0.0750, "source": "EEA 2023 EU road freight" },
+      "US":  { "value": 0.1010, "source": "US EPA MOVES2021 heavy-duty" }
+    },
+    "rail": {
+      "GLO": { "value": 0.0270, "source": "IPCC AR6 WGIII global average rail freight" },
+      "CN":  { "value": 0.0250, "source": "Synthetic: CN rail (electrified mix)" },
+      "EU":  { "value": 0.0140, "source": "EEA 2023 EU rail freight" },
+      "US":  { "value": 0.0200, "source": "AAR 2022 US Class I freight rail" }
+    },
+    "ship": {
+      "GLO": { "value": 0.0160, "source": "IMO 4th GHG Study 2020 average container" },
+      "CN":  { "value": 0.0160, "source": "IMO proxy for CN-flagged vessels" },
+      "EU":  { "value": 0.0155, "source": "EEA 2023 maritime" },
+      "US":  { "value": 0.0160, "source": "US EPA 2022 maritime" }
+    },
+    "pipeline": {
+      "GLO": { "value": 0.0030, "source": "Ecoinvent 3.9 pipeline transport average" },
+      "CN":  { "value": 0.0035, "source": "Synthetic: CN pipeline (older compressor mix)" },
+      "EU":  { "value": 0.0025, "source": "Synthetic: EU pipeline (modern)" },
+      "US":  { "value": 0.0030, "source": "US EIA pipeline energy intensity proxy" }
+    }
+  },
+  "_note": "transport_factor is a STUB interface for Phase 2. The adapter currently marks transport rows as not_adapted. Phase 2 will resolve mode + distance from route metadata."
+}
